@@ -39,6 +39,7 @@ public void openloginpage()
 	@FindBy(xpath="//a[@class='TrackLink']")
 	WebElementFacade webtableproductalldesc;
 	
+	
 	@FindBy(xpath="//span[@class='ProductPrice']")
 	WebElementFacade webtableproductallprice;
     
