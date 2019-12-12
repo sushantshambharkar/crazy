@@ -38,11 +38,7 @@ public void openloginpage()
 
 	@FindBy(xpath="//a[@class='TrackLink']")
 	WebElementFacade webtableproductalldesc;
-	
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'master' of https://github.com/sushantshambharkar/crazy
+
 	@FindBy(xpath="//span[@class='ProductPrice']")
 	WebElementFacade webtableproductallprice;
     
