@@ -2,6 +2,11 @@ package steps;
 
 
 import org.apache.log4j.Logger;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -10,12 +15,17 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getPages;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 import pages.myloginpage;
+import pojo.Product;
 
 public class myloginstep extends PageObject{
 
@@ -28,7 +38,7 @@ public class myloginstep extends PageObject{
 	
 	Logger logger = Logger.getLogger(this.getClass());
 	
-	
+	public List<Product> lstproduct = new ArrayList<Product>();
 	List<String> ProductDesc = new ArrayList<String>();
 	List<String> ProductPrice = new ArrayList<String>();
 			
@@ -119,18 +129,104 @@ public class myloginstep extends PageObject{
 
 	public List<String> lstprod = new ArrayList<String>();
 	
+
 	public void combinestrings() {
 		
 		for (int i=0 ; i < ProductDesc.size(); i++ )
 		{
-		productdescandprice = ProductDesc.get(i) + " \t" +  ProductPrice.get(i);
+			System.out.println("prod desc is " + ProductDesc.get(i));
+			Product product = new Product();
+			
+			product.setProductdesc(ProductDesc.get(i));
+			product.setProductprice( ProductPrice.get(i));
+
+			
+			lstproduct.add(product);
+			
+			productdescandprice = ProductDesc.get(i) + " \t" +  ProductPrice.get(i);
+			
 		//logger.info(productdescandprice);
-		lstprod.add(productdescandprice);
+	}
+	
+	}
+
+	public void ckecklistprod()
+	{
+		
+		System.out.println("lstproduct");
+		for (int z= 0 ; z< lstproduct.size(); z++)
+		{
+			System.out.println(lstproduct.get(z).getProductdesc() + " "+ lstproduct.get(z).getProductprice());
+		}
+		
 		
 	}
 	
 	
+	
+	public List<String> testexcel = new ArrayList<String>();
+    public File crazyfile = new File("C:\\selenium\\excel\\crazyexcel.xlsx");
+
+
+	public void createandsaveexcel()  {
+	
+		Workbook crazyworkbook = null;
+    	FileInputStream crazyfileinputstream = null;
+		
+	    try {
+			crazyfileinputstream = new FileInputStream(crazyfile);
+			crazyworkbook = new XSSFWorkbook(crazyfileinputstream);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	    
+	    Sheet prodsheet = crazyworkbook.getSheetAt(0);
+	    
+	    
+		testexcel.add("I am sushanth");
+     
+		testexcel.add("test");
+             
+	
+			for (int x = 1 ; x < lstproduct.size(); x++)
+			{
+				
+				Row row = prodsheet.createRow(x);
+				
+										
+				Cell cell = row.createCell(0);
+				cell.setCellValue(lstproduct.get(x).getProductdesc());
+				
+				Cell cell2 = row.createCell(1);
+				cell2.setCellValue(lstproduct.get(x).getProductprice());
+				
+			}
+	
+			
+	
+			
+			try {
+			
+				FileOutputStream crazyoutputStream = null;
+				crazyoutputStream = new FileOutputStream(crazyfile);
+				crazyworkbook.write(crazyoutputStream);
+				crazyoutputStream.close();
+				crazyworkbook.close();
+				
+				} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+				
+			}
+			
+			
+			
 	}
+
+	
+	
+	
 	public void displaylist()
 	{
 	System.out.println("the total number of products " + lstprod.size());

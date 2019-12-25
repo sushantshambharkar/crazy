@@ -58,7 +58,6 @@ public void openloginpage()
 	 { 	
 		 if (clicknext.isDisplayed())
 		 {
-		 clicknext.waitUntilVisible();
 		 clicknext.click();
 		 }
 	 }
