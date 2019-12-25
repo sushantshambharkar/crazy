@@ -118,10 +118,9 @@
 			  <groupId>org.apache.maven.plugins</groupId>
 			  <artifactId>maven-failsafe-plugin</artifactId>
 			  <version>3.0.0-M4</version>
-
                 <configuration>
                     <includes>
-                        <include>**/myruuner.java</include>                  
+                        <include>**/myrunner.java</include>                  
                     </includes>
                     <systemProperties>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver> 
