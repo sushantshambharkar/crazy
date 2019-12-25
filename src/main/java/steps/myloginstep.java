@@ -1,7 +1,7 @@
 package steps;
 
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -36,7 +36,7 @@ public class myloginstep extends PageObject{
 	
 	// Syst
 	
-	Logger logger = Logger.getLogger(this.getClass());
+//	Logger logger = Logger.getLogger(this.getClass());
 	
 	public List<Product> lstproduct = new ArrayList<Product>();
 	List<String> ProductDesc = new ArrayList<String>();
@@ -44,7 +44,7 @@ public class myloginstep extends PageObject{
 			
 	public void  openloginpage() 
 	{
-		logger.info("openingpage");
+//		logger.info("openingpage");
 		//System.setProperty("webdriver.gecko.driver" , "C:\\selenium\\WebDrivers\\geckodriver.exe");
 		//loginpage.openUrl("https://www.google.com/");
 		loginpage.openloginpage();
@@ -52,7 +52,7 @@ public class myloginstep extends PageObject{
 	
 	public void searchforthetext(String arg1) 
 	{
-		logger.info("search text comes here");
+//		logger.info("search text comes here");
 		loginpage.searchproduct(arg1);
 	}
 	
