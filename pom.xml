@@ -95,6 +95,14 @@
 </dependency>
 
 
+
+<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-failsafe-plugin</artifactId>
+  <version>3.0.0-M4</version>
+  <type>maven-plugin</type>
+</dependency>
+
  <dependency>
      <groupId>org.assertj</groupId>
      <artifactId>assertj-core</artifactId>
@@ -106,9 +114,11 @@
         <build>
         <plugins>
             <plugin>
-            <groupId>org.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>                  
-                <version>3.0.0-M3</version>
+
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-failsafe-plugin</artifactId>
+			  <version>3.0.0-M4</version>
+
                 <configuration>
                     <includes>
                         <include>**/myruuner.java</include>                  
