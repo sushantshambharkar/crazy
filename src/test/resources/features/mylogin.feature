@@ -1,3 +1,4 @@
+@feature=mylogin
 Feature: mylogin
 
 Scenario: Test Positive 
