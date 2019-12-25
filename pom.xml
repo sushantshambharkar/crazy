@@ -1,161 +1,147 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>.com.org</groupId>
-  <artifactId>crazyserenitytests</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>.com.org</groupId>
+	<artifactId>crazyserenitytests</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>crazyserenitytests</name>
-  <url>http://maven.apache.org</url>
+	<name>crazyserenitytests</name>
+	<url>http://maven.apache.org</url>
 
-<properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>1.9.30</serenity.version>
-        <serenity.maven.version>1.0.6</serenity.maven.version>
-        <webdriver.driver>chrome</webdriver.driver>
-    </properties>
-
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    
-    
-    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
-<dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-core</artifactId>
-    <version>1.9.30</version>
-</dependency>
-    
-    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit -->
-<dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-junit</artifactId>
-    <version>1.9.30</version>
-</dependency>
-    
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-firefox-driver</artifactId>
-    <version>2.53.1</version>
-</dependency>
-    
-    
-    
-<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber -->
-<dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-cucumber</artifactId>
-    <version>1.9.8</version>
-</dependency>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<serenity.version>1.9.30</serenity.version>
+		<serenity.maven.version>1.0.6</serenity.maven.version>
+		<webdriver.driver>chrome</webdriver.driver>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-api</artifactId>
-    <version>1.7.25</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-log4j12</artifactId>
-    <version>1.7.25</version>
-    <scope>test</scope>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.11.1</version>
+			<scope>test</scope>
+		</dependency>
 
 
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>4.1.1</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-core</artifactId>
+			<version>2.0.90</version>
+		</dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>4.1.1</version>
-</dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml-schemas</artifactId>
-    <version>4.1.1</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit -->
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-junit</artifactId>
+			<version>2.0.90</version>
+		</dependency>
 
 
 
-<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-failsafe-plugin</artifactId>
-  <version>3.0.0-M4</version>
-  <type>maven-plugin</type>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber -->
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-cucumber</artifactId>
+			<version>1.9.49</version>
+		</dependency>
 
- <dependency>
-     <groupId>org.assertj</groupId>
-     <artifactId>assertj-core</artifactId>
-     <version>3.10.0</version>
-     <scope>test</scope>
- </dependency>
 
-</dependencies>
-        <build>
-        <plugins>
-            <plugin>
 
-			  <groupId>org.apache.maven.plugins</groupId>
-			  <artifactId>maven-failsafe-plugin</artifactId>
-			  <version>3.0.0-M4</version>
-                <configuration>
-                    <includes>
-                        <include>**/myrunner.java</include>                  
-                    </includes>
-                    <systemProperties>
-                        <webdriver.driver>${webdriver.driver}</webdriver.driver> 
-                     </systemProperties>
-                </configuration>
-                <executions>
-                <execution>
-                <goals>
-                		<goal>integration-test</goal>
-                </goals>
-                </execution>
-                </executions>
-            </plugin>
-   <!--          <plugin>
-                <groupId>net.serenity-bdd.maven.plugins</groupId>       
-                <artifactId>serenity-maven-plugin</artifactId>
-                <version>${serenity.maven.version}</version>
-                <dependencies>
-                     <dependency>
-                        <groupId>net.serenity-bdd</groupId>
-                        <artifactId>serenity-core</artifactId>
-                        <version>${serenity.version}</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <id>serenity-reports</id>
-                        <phase>post-integration-test</phase>             
-                        <goals>
-                            <goal>aggregate</goal>                       
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin> -->
-        </plugins>
-    </build>
-    
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.25</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-failsafe-plugin</artifactId>
+			<version>3.0.0-M4</version>
+			<type>maven-plugin</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.10.0</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<configuration>
+					<includes>
+						<include>**/myrunner.java</include>
+					</includes>
+					<systemProperties>
+						<webdriver.driver>${webdriver.driver}</webdriver.driver>
+					</systemProperties>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- <plugin> <groupId>net.serenity-bdd.maven.plugins</groupId> <artifactId>serenity-maven-plugin</artifactId> 
+				<version>${serenity.maven.version}</version> <dependencies> <dependency> 
+				<groupId>net.serenity-bdd</groupId> <artifactId>serenity-core</artifactId> 
+				<version>${serenity.version}</version> </dependency> </dependencies> <executions> 
+				<execution> <id>serenity-reports</id> <phase>post-integration-test</phase> 
+				<goals> <goal>aggregate</goal> </goals> </execution> </executions> </plugin> -->
+		</plugins>
+	</build>
+
 </project>
