@@ -25,10 +25,7 @@ public class myloginstep {
 
 	private myloginpage loginpage;
 	private String baseurl;
-
 	private String productdescandprice;
-
-	// Syst
 
 	// Logger logger = Logger.getLogger(this.getClass());
 
@@ -112,8 +109,14 @@ public class myloginstep {
 			System.out.println("prod desc is " + ProductDesc.get(i));
 			Product product = new Product();
 
+			int len_price = ProductPrice.get(i).length();
+			int startdiscountprice= ProductPrice.get(i).lastIndexOf("$");
+			
+			String discprice = ProductPrice.get(i).substring((len_price-startdiscountprice), len_price);
+			String orgprice = ProductPrice.get(i).substring(0, (len_price-startdiscountprice));
 			product.setProductdesc(ProductDesc.get(i));
-			product.setProductprice(ProductPrice.get(i));
+			product.setProductprice(orgprice);
+			product.setProductdiscount(discprice);
 
 			lstproduct.add(product);
 
@@ -123,10 +126,23 @@ public class myloginstep {
 		}
 
 	}
+	
+	public void displaylist() {
+		System.out.println("the total number of products " + lstprod.size());
+
+		for (int z = 0; z < lstprod.size(); z++)
+
+		{
+			System.out.println("the list is being displayed " + lstprod.get(z).toString());
+		}
+	}
 
 	public void ckecklistprod() {
 
 		System.out.println("lstproduct");
+		
+		System.out.println("list of Product is being written ");
+		
 		for (int z = 0; z < lstproduct.size(); z++) {
 			System.out.println(lstproduct.get(z).getProductdesc() + " " + lstproduct.get(z).getProductprice());
 		}
@@ -163,6 +179,9 @@ public class myloginstep {
 
 			Cell cell2 = row.createCell(1);
 			cell2.setCellValue(lstproduct.get(x).getProductprice());
+			
+			Cell cell3 = row.createCell(2);
+			cell3.setCellValue(lstproduct.get(x).getProductdiscount());	
 
 		}
 
@@ -182,14 +201,6 @@ public class myloginstep {
 
 	}
 
-	public void displaylist() {
-		System.out.println("the total number of products " + lstprod.size());
 
-		for (int z = 0; z < lstprod.size(); z++)
-
-		{
-			System.out.println("the list is being displayed " + lstprod.get(z).toString());
-		}
-	}
 
 }

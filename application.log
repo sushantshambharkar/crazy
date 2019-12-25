@@ -1,4 +1,4 @@
-2019-12-25 15:28:38,189  INFO [main] ConsoleLoggingListener:220 - [36m
+2019-12-25 16:51:45,552  INFO [main] ConsoleLoggingListener:217 - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -14,9 +14,10 @@
  Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
-[0m
-2019-12-25 15:28:38,208  INFO [main] ConsoleLoggingListener:249 - Test Suite Started: Mylogin
-2019-12-25 15:28:38,411  INFO [main] ConsoleLoggingListener:266 - 
+
+2019-12-25 16:51:45,574  INFO [main] ConsoleLoggingListener:246 - Test Suite Started: Mylogin
+2019-12-25 16:51:45,634  WARN [main] BaseStepListener:441 - testStarted: Test Positive/mylogin;test-positive
+2019-12-25 16:51:45,649  INFO [main] ConsoleLoggingListener:263 - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -26,19 +27,22 @@
 
 TEST STARTED: Test Positive
 -------------------------------------------------------------------(mylogin;test-positive)
-2019-12-25 15:28:49,913  INFO [main] myloginstepdef:26 - In the Given
-2019-12-25 15:28:54,490  INFO [main] myloginstepdef:39 - In the When
-2019-12-25 15:33:30,814  INFO [main] ConsoleLoggingListener:393 - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
-
-TEST PASSED: Test Positive
-----------------------------------------------------------------------------
-2019-12-25 15:33:30,817  INFO [main] ConsoleLoggingListener:393 - 
+2019-12-25 16:51:45,739  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@758705fa
+2019-12-25 16:51:47,109  INFO [main] ProvideNewDriver:38 - Instantiating driver
+2019-12-25 16:51:47,114  INFO [main] ProvideNewDriver:39 - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+2019-12-25 16:51:55,727  INFO [main] myloginstepdef:21 - In the Given
+2019-12-25 16:51:55,730  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page
+2019-12-25 16:51:56,323  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@173a6728
+2019-12-25 16:52:02,917  INFO [main] myloginstepdef:33 - In the When
+2019-12-25 16:52:02,918  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page, When user enters search text "dell"
+2019-12-25 16:52:03,216  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@c2584d3
+2019-12-25 16:59:10,714  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page
+2019-12-25 16:59:11,390  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@56976b8b
+2019-12-25 16:59:14,340  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list
+2019-12-25 16:59:14,653  WARN [main] BaseStepListener:502 - testFinished: Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list
+2019-12-25 16:59:14,657  WARN [main] BaseStepListener:503 - TestOutcomes: [Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list]
+2019-12-25 16:59:15,602  WARN [main] BaseStepListener:536 - Final testOutcomes: [Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list]
+2019-12-25 16:59:15,603  INFO [main] ConsoleLoggingListener:395 - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
   _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
  (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |

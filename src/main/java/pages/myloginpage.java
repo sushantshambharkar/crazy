@@ -4,6 +4,9 @@ import net.serenitybdd.core.pages.PageObject;
 import java.time.temporal.ChronoUnit;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
 
 //import org.apache.log4j.Logger;
 
@@ -51,17 +54,23 @@ public class myloginpage extends PageObject {
 	public void clicknextpage()
 
 	{
+		WebDriver driver = getDriver();
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		if (clicknext.isDisplayed()) {
 			clicknext.click();
 		}
 	}
 
+	
+
+
+	
 	public String getwebtableproductdesc() {
 		return webtableproductdesc.getTextValue();
 	}
 
 	public List<WebElementFacade> getwebtableallproductdesc() {
-		setImplicitTimeout(2, ChronoUnit.MINUTES);
+		setImplicitTimeout(2, ChronoUnit.SECONDS);
 		waitFor(webtableproductalldesc).isDisplayed();
 		// (ExpectedConditions.visibilityOfAllElements( webtableproductalldesc));
 		return webtableproductalldesc.thenFindAll(By.xpath("//a[@class='TrackLink']"));
@@ -69,7 +78,7 @@ public class myloginpage extends PageObject {
 	}
 
 	public List<WebElementFacade> getwebtableallproductprices() {
-		setImplicitTimeout(2, ChronoUnit.MINUTES);
+		setImplicitTimeout(30, ChronoUnit.SECONDS);
 		waitFor(webtableproductallprice).isPresent();
 		return webtableproductallprice.thenFindAll(By.xpath("//span[@class='ProductPrice']"));
 	}

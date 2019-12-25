@@ -41,22 +41,12 @@ public class myloginstepdef {
 		}
 	}
 
-	// isElementPresent(WebDriver driver, By by) {
-	// driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-	// try {
-	// driver.findElement(by);
-	// return true;
-	// } catch (NoSuchElementException e) {
-	// return false;
-	// } finally {
-	// driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	// }
-	// }
 
 	@Then("^user gets the price list$")
 	public void user_gets_the_price_list() {
 
 		loginstep.combinestrings();
+		loginstep.ckecklistprod();
 		loginstep.createandsaveexcel();
 		loginstep.displaylist();
 
