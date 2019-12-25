@@ -2,11 +2,11 @@ package pages;
 
 import net.serenitybdd.core.pages.PageObject;
 import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
+
 import java.util.List;
 
 //import org.apache.log4j.Logger;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;

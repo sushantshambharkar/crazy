@@ -8,9 +8,6 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
@@ -28,7 +25,7 @@ import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver
 import pages.myloginpage;
 import pojo.Product;
 
-public class myloginstep extends PageObject{
+public class myloginstep{
 
 	private myloginpage loginpage;
 	private String baseurl;
@@ -75,7 +72,7 @@ public class myloginstep extends PageObject{
 	
     public void clicknextpage() 
     {
-    	setImplicitTimeout(2, ChronoUnit.MINUTES );
+    	
     	loginpage.clicknextpage();
     	
     	try {
@@ -89,14 +86,14 @@ public class myloginstep extends PageObject{
 	
 	public void getwebtabledata()
 	{
-		setImplicitTimeout(2, ChronoUnit.MINUTES );
+		
 		List<WebElementFacade> webElementproddesc= loginpage.getwebtableallproductdesc();
 		List<WebElementFacade> webElementprodprices = loginpage.getwebtableallproductprices();
 
 		
 		for ( WebElementFacade webElementFacadedesc : webElementproddesc )
 		{
-			setImplicitTimeout(2, ChronoUnit.MINUTES );
+			
 			if (webElementFacadedesc.getText().isEmpty())
 			{  }
 			else
@@ -110,7 +107,7 @@ public class myloginstep extends PageObject{
 		for ( WebElementFacade webElementFacadeProdPrice : webElementprodprices )
 			
 		{
-			setImplicitTimeout(2, ChronoUnit.MINUTES );
+			
 		//	logger.info(webElementFacadeProdPrice.getText());
 			ProductPrice.add(webElementFacadeProdPrice.getText());
 		}	
