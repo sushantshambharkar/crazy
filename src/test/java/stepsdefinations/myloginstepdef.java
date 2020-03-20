@@ -52,4 +52,10 @@ public class myloginstepdef {
 
 	}
 
+	
+	@Then("^user gets email$")
+	public void user_gets_email() {
+	    loginstep.sendemailtoAll();
+	}
+
 }

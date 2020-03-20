@@ -20,6 +20,7 @@ import java.util.List;
 
 import pages.myloginpage;
 import pojo.Product;
+import util.EmailService;
 
 public class myloginstep {
 
@@ -199,6 +200,14 @@ public class myloginstep {
 
 		}
 
+	}
+
+	public void sendemailtoAll() {
+		EmailService es = new EmailService();
+
+		es.dispathEmail("Hi", "testing ", "sushant.shambharkar@gmail.com", " ", " ");
+
+		
 	}
 
 

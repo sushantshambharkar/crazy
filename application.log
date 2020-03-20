@@ -1,4 +1,4 @@
-2019-12-25 16:51:45,552  INFO [main] ConsoleLoggingListener:217 - 
+2019-12-27 16:22:39,890  INFO [main] ConsoleLoggingListener:217 - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -15,9 +15,9 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-2019-12-25 16:51:45,574  INFO [main] ConsoleLoggingListener:246 - Test Suite Started: Mylogin
-2019-12-25 16:51:45,634  WARN [main] BaseStepListener:441 - testStarted: Test Positive/mylogin;test-positive
-2019-12-25 16:51:45,649  INFO [main] ConsoleLoggingListener:263 - 
+2019-12-27 16:22:39,912  INFO [main] ConsoleLoggingListener:246 - Test Suite Started: Mylogin
+2019-12-27 16:22:39,993  WARN [main] BaseStepListener:441 - testStarted: Test Positive/mylogin;test-positive
+2019-12-27 16:22:40,003  INFO [main] ConsoleLoggingListener:263 - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -27,22 +27,12 @@
 
 TEST STARTED: Test Positive
 -------------------------------------------------------------------(mylogin;test-positive)
-2019-12-25 16:51:45,739  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@758705fa
-2019-12-25 16:51:47,109  INFO [main] ProvideNewDriver:38 - Instantiating driver
-2019-12-25 16:51:47,114  INFO [main] ProvideNewDriver:39 - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
-2019-12-25 16:51:55,727  INFO [main] myloginstepdef:21 - In the Given
-2019-12-25 16:51:55,730  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page
-2019-12-25 16:51:56,323  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@173a6728
-2019-12-25 16:52:02,917  INFO [main] myloginstepdef:33 - In the When
-2019-12-25 16:52:02,918  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page, When user enters search text "dell"
-2019-12-25 16:52:03,216  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@c2584d3
-2019-12-25 16:59:10,714  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page
-2019-12-25 16:59:11,390  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@56976b8b
-2019-12-25 16:59:14,340  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list
-2019-12-25 16:59:14,653  WARN [main] BaseStepListener:502 - testFinished: Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list
-2019-12-25 16:59:14,657  WARN [main] BaseStepListener:503 - TestOutcomes: [Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list]
-2019-12-25 16:59:15,602  WARN [main] BaseStepListener:536 - Final testOutcomes: [Test Positive:Given user opens the home page, When user enters search text "dell", When user clicks on next page, Then user gets the price list]
-2019-12-25 16:59:15,603  INFO [main] ConsoleLoggingListener:395 - 
+2019-12-27 16:22:40,095  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@550a1967
+2019-12-27 16:22:42,862  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Then user gets email
+2019-12-27 16:22:42,868  WARN [main] BaseStepListener:502 - testFinished: Test Positive:Then user gets email
+2019-12-27 16:22:42,869  WARN [main] BaseStepListener:503 - TestOutcomes: [Test Positive:Then user gets email]
+2019-12-27 16:22:42,871  WARN [main] BaseStepListener:536 - Final testOutcomes: [Test Positive:Then user gets email]
+2019-12-27 16:22:42,872  INFO [main] ConsoleLoggingListener:395 - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
   _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
  (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
