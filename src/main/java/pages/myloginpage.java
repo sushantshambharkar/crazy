@@ -21,9 +21,15 @@ public class myloginpage extends PageObject {
 	// Logger logger = Logger.getLogger(this.getClass());
 
 	public void openloginpage() {
+		
 		open();
 	}
-
+//	https://www.selenium.dev/documentation/en/support_packages/working_with_cookies/
+	
+// https://www.selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/
+	
+	
+	
 	@FindBy(id = "search_query")
 	WebElementFacade searchinput;
 

@@ -1,4 +1,4 @@
-2019-12-27 16:22:39,890  INFO [main] ConsoleLoggingListener:217 - 
+2020-04-05 20:52:44,965  INFO [main] ConsoleLoggingListener:217 - 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -15,9 +15,9 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-2019-12-27 16:22:39,912  INFO [main] ConsoleLoggingListener:246 - Test Suite Started: Mylogin
-2019-12-27 16:22:39,993  WARN [main] BaseStepListener:441 - testStarted: Test Positive/mylogin;test-positive
-2019-12-27 16:22:40,003  INFO [main] ConsoleLoggingListener:263 - 
+2020-04-05 20:52:44,990  INFO [main] ConsoleLoggingListener:246 - Test Suite Started: Mylogin
+2020-04-05 20:52:45,098  WARN [main] BaseStepListener:441 - testStarted: Test Positive/mylogin;test-positive
+2020-04-05 20:52:45,119  INFO [main] ConsoleLoggingListener:263 - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -27,18 +27,26 @@
 
 TEST STARTED: Test Positive
 -------------------------------------------------------------------(mylogin;test-positive)
-2019-12-27 16:22:40,095  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@550a1967
-2019-12-27 16:22:42,862  WARN [main] BaseStepListener:690 - stepFinished: current outcome:Test Positive:Then user gets email
-2019-12-27 16:22:42,868  WARN [main] BaseStepListener:502 - testFinished: Test Positive:Then user gets email
-2019-12-27 16:22:42,869  WARN [main] BaseStepListener:503 - TestOutcomes: [Test Positive:Then user gets email]
-2019-12-27 16:22:42,871  WARN [main] BaseStepListener:536 - Final testOutcomes: [Test Positive:Then user gets email]
-2019-12-27 16:22:42,872  INFO [main] ConsoleLoggingListener:395 - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+2020-04-05 20:52:45,227  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@52851b44
+2020-04-05 20:52:47,062  INFO [main] ProvideNewDriver:38 - Instantiating driver
+2020-04-05 20:52:47,067  INFO [main] ProvideNewDriver:39 - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+2020-04-05 20:52:47,137  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@19058533
+2020-04-05 20:52:47,184  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@cb03411
+2020-04-05 20:52:47,194  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4fad6218
+2020-04-05 20:52:47,200  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@30e6a763
+2020-04-05 20:52:47,205  WARN [main] BaseStepListener:576 - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@f096f37
+2020-04-05 20:52:47,212  WARN [main] BaseStepListener:502 - testFinished: Test Positive:Given user opens the home page [Openloginpage], When user enters search text "dell", When user clicks on next page, Then user gets the price list, Then user gets email
+2020-04-05 20:52:47,213  WARN [main] BaseStepListener:503 - TestOutcomes: [Test Positive:Given user opens the home page [Openloginpage], When user enters search text "dell", When user clicks on next page, Then user gets the price list, Then user gets email]
+2020-04-05 20:52:47,214  WARN [main] BaseStepListener:536 - Final testOutcomes: [Test Positive:Given user opens the home page [Openloginpage], When user enters search text "dell", When user clicks on next page, Then user gets the price list, Then user gets email]
+2020-04-05 20:52:47,215 ERROR [main] ConsoleLoggingListener:326 - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Test Positive
-----------------------------------------------------------------------------
+TEST FAILED WITH ERROR: Test Positive
+---------------------------------------------------------------------
+2020-04-05 20:52:47,325 ERROR [main] ConsoleLoggingListener:366 - TEST FAILED AT STEP Openloginpage
+2020-04-05 20:52:47,326 ERROR [main] ConsoleLoggingListener:368 - Could not instantiate new WebDriver instance of type class org.openqa.selenium.chrome.ChromeDriver (The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html). See below for more details.
