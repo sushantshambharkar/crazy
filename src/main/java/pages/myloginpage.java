@@ -23,6 +23,7 @@ public class myloginpage extends PageObject {
 	public void openloginpage() {
 		
 		open();
+		
 	}
 //	https://www.selenium.dev/documentation/en/support_packages/working_with_cookies/
 	
